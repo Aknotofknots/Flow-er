@@ -1,0 +1,67 @@
+
+.App {
+    font-size: 62.5%;
+    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+   /* background-color: slategrey;*/
+}
+
+.comment-form input{
+
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #150a0a;
+    font-size: 1rem;
+    padding: 1rem;
+    outline: none;
+}
+
+.delete-user:before:hover{
+
+    content: "this user will be deleted";
+}
+
+
+.username {
+    color: darkred;
+    font-size: small;
+}
+
+.username:hover {
+    background-color: #eecf3d;
+
+}
+
+.comment {
+
+    border-bottom: 1px solid lightgreen;
+    padding: 0.5rem 0;
+}
+
+
+.comment p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+#remove{
+    font-size: x-large;
+}
+
+.brand {
+    font-size: 0.85rem;
+    cursor: crosshair;
+}
+
+.catchphrase{
+    word-wrap: break-word;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.button-text {
+    color: #E3F09B;
+    background-color: #5B5941;
+}
+
