@@ -1,9 +1,9 @@
 //node import modules
-import {createStore, applyMiddleware, compose} from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers/index';
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import rootReducer from "./reducers/index";
 
-
+/*
 const getEnhancer = () => {
 
     // a little hack to get by that the redux devtools causes problems in different browsers
@@ -16,11 +16,11 @@ const getEnhancer = () => {
 
     return compose(applyMiddleware(thunk))
 
-};
+};*/
 
-const store = createStore(rootReducer, getEnhancer());
+const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
-if (module.hot) {
+/*if (module.hot) {
 
     module.hot.accept('./reducers/', () => {
 
@@ -28,5 +28,6 @@ if (module.hot) {
         store.replaceReducer(nextRootReducer);
     })
 }
+*/
 
 export default store;
