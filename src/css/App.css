@@ -1,67 +1,69 @@
-
 .App {
-    font-size: 62.5%;
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
-   /* background-color: slategrey;*/
+  font-size: 62.5%;
+  font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+  /* background-color: slategrey;*/
 }
 
-.comment-form input{
-
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #150a0a;
-    font-size: 1rem;
-    padding: 1rem;
-    outline: none;
+.card-container {
+  box-shadow: 1px 1px 1px #242121;
+  transform: translateY(0px);
 }
 
-.delete-user:before:hover{
-
-    content: "this user will be deleted";
+.card-container:hover {
+  box-shadow: 5px 5px 5px #242121;
+  transform: translateY(-3px);
 }
 
+.comment-form input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #150a0a;
+  font-size: 1rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.delete-user:before:hover {
+  content: "this user will be deleted";
+}
 
 .username {
-    color: darkred;
-    font-size: small;
+  color: darkred;
+  font-size: small;
 }
 
 .username:hover {
-    background-color: #eecf3d;
-
+  background-color: #eecf3d;
 }
 
 .comment {
-
-    border-bottom: 1px solid lightgreen;
-    padding: 0.5rem 0;
+  border-bottom: 1px solid lightgreen;
+  padding: 0.5rem 0;
 }
-
 
 .comment p {
-    font-size: 0.85rem;
-    margin: 0;
+  font-size: 0.85rem;
+  margin: 0;
 }
 
-#remove{
-    font-size: x-large;
+#remove {
+  font-size: x-large;
 }
 
 .brand {
-    font-size: 0.85rem;
-    cursor: crosshair;
+  font-size: 0.85rem;
+  cursor: crosshair;
 }
 
-.catchphrase{
-    word-wrap: break-word;
+.catchphrase {
+  word-wrap: break-word;
 }
 
 .brand:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .button-text {
-    color: #E3F09B;
-    background-color: #5B5941;
+  color: #e3f09b;
+  background-color: #5b5941;
 }
-

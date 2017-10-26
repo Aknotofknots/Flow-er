@@ -147,7 +147,6 @@ function fetchArticlesAndUpdateState() {
     firebase
       .database()
       .ref("articles")
-      .limitToLast(12)
       .once("value", articles => {
         const fetchedArticles = Object.values(articles.val());
         const articlesWithKey = [];
@@ -155,13 +154,19 @@ function fetchArticlesAndUpdateState() {
         fetchedArticles.map(article => {
           articlesWithKey.push({
             ...article,
-            key: uuid(article.url, uuid.URL)
+            key: uuid(article.url, uuid.URL),
+            publishedAt: new Date(article.publishedAt)
           });
         });
+        const articlesSortedByDate = articlesWithKey.sort(
+          (articleA, articleB) => {
+            return articleB.publishedAt - articleA.publishedAt; // sort in descending order
+          }
+        );
 
         dispatch({
           type: "ADD_ARTICLES",
-          payload: articlesWithKey
+          payload: articlesSortedByDate
         });
       });
   };
