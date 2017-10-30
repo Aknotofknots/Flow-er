@@ -1,7 +1,7 @@
 # A School project for the vocational school Lernia
 
 ##### **What is it ? -** 
-* A social community app where you can comment on games and digital entertainment news posts brought in from IGN. This is made via the [News API](https://newsapi.org/)
+* A social community app where you can comment on games and digital entertainment news posts brought in from IGN. The news are provided via the [News API](https://newsapi.org/)
 
 ##### **What did you use to build it ? -**
 *  Scaffolding - [create-react-app](https://github.com/facebookincubator/create-react-app)
