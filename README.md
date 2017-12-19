@@ -1,9 +1,9 @@
 # A School project for the vocational school Lernia
 
-##### **What is it ? -** 
+### **What is it ? -** 
 * A social community app where you can comment on games and digital entertainment news posts brought in from IGN. The news are provided via the [News API](https://newsapi.org/)
 
-##### **What did you use to build it ? -**
+### **What did you use to build it ? -**
 *  Scaffolding - [create-react-app](https://github.com/facebookincubator/create-react-app)
 *  Statemanagement - [Redux](http://redux.js.org/)
 *  Bindings - [React-Redux](https://github.com/reactjs/react-redux) - offical React bindings for Redux
@@ -11,3 +11,5 @@
 *  Database - [Firebase](https://firebase.google.com/)
 *  Styling - [Reactstrap](https://reactstrap.github.io/) (Boostrap 4 React Component library) and some custom Bootstrap 4.
 *  Icons - [Materials icons](https://material.io/icons/):fist:
+
+### Project is live here [here](https://flow-er.herokuapp.com/)
