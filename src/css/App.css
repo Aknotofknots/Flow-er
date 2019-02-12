@@ -1,6 +1,6 @@
 .App {
   font-size: 62.5%;
-  font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+  font-family: Raleway, Roboto, 'Helvetica Neue', sans-serif;
   /* background-color: slategrey;*/
 }
 
@@ -24,7 +24,7 @@
 }
 
 .delete-user:before:hover {
-  content: "this user will be deleted";
+  content: 'this user will be deleted';
 }
 
 .username {

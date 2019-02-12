@@ -1,17 +1,14 @@
-function user(state = "", action) {
+function user(state = '', action) {
+  switch (action.type) {
+    case 'SIGN_IN':
+      return action.user;
 
-    switch (action.type){
+    case 'SIGN_OUT':
+      return action.user;
 
-        case "SIGN_IN":
-            return action.user;
-
-        case "SIGN_OUT":
-            return action.user;
-
-        default:
-            return state;
-
-    }
+    default:
+      return state;
+  }
 }
 
 export default user;

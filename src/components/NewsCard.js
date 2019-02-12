@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Container, Row } from "reactstrap";
-import NewsCardContent from "./NewsCardContent";
+import React, { Component } from 'react';
+import { Container, Row } from 'reactstrap';
+import NewsCardContent from './NewsCardContent';
 
 const NewsCard = ({
   articles,
@@ -11,7 +11,7 @@ const NewsCard = ({
   deleteUser
 }) => {
   return (
-    <Container style={{ borderRadius: "5px" }}>
+    <Container style={{ borderRadius: '5px' }}>
       <Row>
         <NewsCardContent
           comments={comments}

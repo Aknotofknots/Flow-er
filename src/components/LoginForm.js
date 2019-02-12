@@ -1,72 +1,72 @@
-import React, {Component} from 'react';
-import {Form, Button} from 'reactstrap';
-import {EmailInput, PasswordInput} from "./FormGroupsWithFloatingLabel";
-import VideoGameAsset from 'react-icons/lib/md/videogame-asset'
-
+import React, { Component } from 'react';
+import { Form, Button } from 'reactstrap';
+import { EmailInput, PasswordInput } from './FormGroupsWithFloatingLabel';
+import VideoGameAsset from 'react-icons/lib/md/videogame-asset';
 
 class LoginForm extends Component {
+  state = {
+    email: '',
+    password: ''
+  };
 
-    state = {
-        email: "",
-        password: ""
-    };
+  handleInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
 
-    handleInput = (e) => {
+  signIn = e => {
+    e.preventDefault();
 
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    };
+    const { email, password } = this.state;
+    const { user, userLogin } = this.props;
 
-    signIn = (e) => {
+    userLogin({
+      email,
+      password,
+      user
+    });
+  };
 
-        e.preventDefault();
+  render() {
+    const { isOpen } = this.props;
 
-        const {email, password} = this.state;
-        const {user, userLogin} = this.props;
+    const form = isOpen ? (
+      <Form onSubmit={this.signIn}>
+        <EmailInput handleInput={this.handleInput} />
+        <PasswordInput handleInput={this.handleInput} />
+        <Button type="submit" outline color="danger" size="sm">
+          Login <VideoGameAsset />
+        </Button>
+      </Form>
+    ) : (
+      <Form inline onSubmit={this.signIn}>
+        <EmailInput handleInput={this.handleInput} />
+        <PasswordInput handleInput={this.handleInput} />
+        <Button
+          type="submit"
+          style={this.styles.button}
+          outline
+          color="danger"
+          size="sm"
+        >
+          Login <VideoGameAsset style={this.styles.typography} />
+        </Button>
+      </Form>
+    );
 
-        userLogin({
-            email,
-            password,
-            user
-        })
-    };
+    return form;
+  }
 
-    render() {
+  styles = {
+    button: {
+      marginLeft: '5px'
+    },
 
-        const {isOpen} = this.props;
-
-        const form = isOpen ?
-
-            <Form onSubmit={this.signIn}>
-                <EmailInput handleInput={this.handleInput}/>
-                <PasswordInput handleInput={this.handleInput}/>
-                <Button type="submit" outline color="danger" size="sm">Login <VideoGameAsset/></Button>
-            </Form> :
-            <Form inline onSubmit={this.signIn}>
-                <EmailInput handleInput={this.handleInput}/>
-                <PasswordInput handleInput={this.handleInput}/>
-                <Button type="submit" style={this.styles.button} outline color="danger" size="sm">Login <VideoGameAsset
-                    style={this.styles.typography}/></Button>
-            </Form>;
-
-        return (form)
+    typography: {
+      fontSize: '2rem'
     }
-
-    styles = {
-
-        button: {
-
-            marginLeft: "5px",
-        },
-
-        typography: {
-
-            fontSize: "2rem"
-        }
-
-    };
-};
-
+  };
+}
 
 export default LoginForm;

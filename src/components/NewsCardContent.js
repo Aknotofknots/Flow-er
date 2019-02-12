@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import CommentForm from "./CommentForm";
+import React, { Component } from 'react';
+import CommentForm from './CommentForm';
 import {
   Card,
   CardImg,
@@ -8,7 +8,7 @@ import {
   CardDeck,
   CardBody,
   Col
-} from "reactstrap";
+} from 'reactstrap';
 
 const NewsCardContent = ({
   articles,
@@ -22,7 +22,7 @@ const NewsCardContent = ({
   const renderCards = article => {
     return (
       <Col
-        style={{ marginTop: "10px", marginBottom: "10px" }}
+        style={{ marginTop: '10px', marginBottom: '10px' }}
         key={article.key}
         xs="12"
         sm="12"
@@ -37,7 +37,7 @@ const NewsCardContent = ({
               alt="News Post"
             />
             <CardBody>
-              <CardTitle style={{ fontSize: "1rem" }}>
+              <CardTitle style={{ fontSize: '1rem' }}>
                 {article.title}
               </CardTitle>
               <CardText>{article.description}...</CardText>

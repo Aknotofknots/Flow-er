@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 //reducer imports
 import errors from './errors';
@@ -7,13 +7,12 @@ import articles from './articles';
 import comments from './comments';
 import notifications from './notifications';
 
-
 const rootReducer = combineReducers({
-    errors,
-    user,
-    articles,
-    comments,
-    notifications
+  errors,
+  user,
+  articles,
+  comments,
+  notifications
 });
 
 export default rootReducer;
